@@ -1,0 +1,25 @@
+{% extends 'bootstrap/base.html'%}
+<!-- Navbar block  -->
+{% block navbar %}
+{% include 'navbar.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Welcome to the best Movie Review website </title>
+    {% endif %}
+</head>
+
+<body>
+    <div class="card">
+        <h4>{{title }}</h4>
+        <h4>{{author}}</h4>
+    </div>
+</body>
+
+</html>
+{% endblock %}

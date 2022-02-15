@@ -1,10 +1,20 @@
+import os
+
+
 class Config:
     '''
     General configuration parent class
     '''
 
     OUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancyndungu:password@localhost/watchlist/personal-blog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancyndungu:password@localhost/personal-blog'
+
+    #  email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 
 class ProdConfig(Config):

@@ -1,7 +1,7 @@
 from flask import render_template, Blueprint
 from ..requests import get_quote
-
 from flask import render_template, request, redirect, url_for
+from flask_login import login_required, login_manager
 
 # Views
 main = Blueprint('main', __name__)
@@ -19,7 +19,8 @@ def index():
     return render_template('index.html', title=title, author=author)
 
 
-@main.route('/movie/<int:quote_id>')
+@main.route('/movie/<int:quote_id>', methods=['GET', 'POST'])
+@login_required
 def quote(quote_id):
     '''
     View movie page function that returns the movie details page and its data

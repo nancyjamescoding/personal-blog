@@ -30,9 +30,8 @@ def new_blog():
     if blog_form.validate_on_submit():
         title = blog_form.title.data
         blog = blog_form.text.data
-        category = blog_form.category.data
 
-        new_blog = Blog(body=title, content=blog, category=category,
+        new_blog = Blog(body=title, content=blog,
                         user_id=current_user.id, likes=0, dislikes=0)
 
         new_blog.save_blog()

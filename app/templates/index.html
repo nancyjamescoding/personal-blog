@@ -1,6 +1,54 @@
 {% extends 'base.html'%}
-<!-- Styles block -->
-{% block styles%}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+{% block content %}
+<div class="card">
+    <h2> Quote of the day</h2>
+    <h4>{{title }}</h4>
+    <h4>{{author}}</h4>
+</div>
+<h1 style="text-align: center;">Welcome to the Blogs</h1>
+<div class="container"><br><br>
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card jumbotron text-center">
+
+
+                <div class="card-body">
+                    <h2 class="card-title">Inspiration</h2>
+                    <p class="card-text">“This blog thrives in making inspiration and self-development today’s
+                        breaking news. It covers motivational quotes, articles, and videos you need to truly succeed
+                        in every area of your life. Founded by Nancy Ndungu in 2022</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card jumbotron text-center">
+
+
+                <div class="card-body">
+                    <h2 class="card-title">Success</h2>
+                    <p class="card">Success is a journey and not a destination.On this journey, we encounter stop
+                        signs, road blocks, breakdowns etc. These are times we need some sort of direction and
+                        motivation to propel us to keep moving forward, until we attain our own definition of
+                        success.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="card jumbotron text-center">
+
+
+                <div class="card-body">
+                    <h2 class="card-title">Forever Greatful</h2>
+                    <p class="card">Did you know that when you achieve something or are successful in an outcome, it
+                        increases the dopamine receptors in your brain, which makes you smarter and more courageous?
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 {% endblock %}

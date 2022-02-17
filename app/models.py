@@ -40,7 +40,6 @@ class Blog(db.Model):
     body = db.Column(db.String(140))
     content = db.Column(db.String)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    category = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     comment = db.relationship('Comment', backref='blog_id', lazy='dynamic')
     likes = db.Column(db.Integer)

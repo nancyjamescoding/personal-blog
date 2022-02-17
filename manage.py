@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 migrate = Migrate()
 
 # Creating app instance
-app = create_app('development')
+app = create_app('production')
 cli = FlaskGroup(app)
 
 migrate.init_app(app, db)

@@ -1,1 +1,1 @@
-from . import views, forms
+from .views import *

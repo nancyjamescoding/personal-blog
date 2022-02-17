@@ -5,9 +5,9 @@ class Config:
     '''
     General configuration parent class
     '''
-
+    SECRET_KEY = 'this is a secret'
     OUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancyndungu:password@localhost/personal-blog'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'

@@ -3,7 +3,7 @@ from wtforms import StringField, TextAreaField, SubmitField, SelectField
 from wtforms.validators import InputRequired
 
 
-class PitchForm(FlaskForm):
+class BlogForm(FlaskForm):
     title = StringField('blog_title')
     text = TextAreaField('blog_text')
     category = SelectField('blog_type', choices=[(

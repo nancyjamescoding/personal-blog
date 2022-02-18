@@ -1,0 +1,12 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'base.html'%}
+{% block content %}
+<div class="card">
+    {% for blog in blogs %}
+    <h4>{{ blog.body }}</h4>
+    <h4>{{ blog.content }}</h4>
+    <h4>{{ blog.timestamp }}</h4>
+    <h4>Likes{{ blog.likes }}</h4>
+    {% endfor %}
+</div>
+{%endblock%}

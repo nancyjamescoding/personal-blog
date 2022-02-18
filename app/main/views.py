@@ -42,6 +42,13 @@ def new_blog():
     return render_template('newblog.html', title=title, blog_form=blog_form)
 
 
+@main.route('/blogs', methods=['GET', 'POST'])
+@login_required
+def view_blogs():
+    blogs = Blog.query.all()
+    return render_template('view_blogs.html', blogs=blogs)
+
+
 @main.route('/blog/<int:id>', methods=['GET', 'POST'])
 @login_required
 def blog(id):
